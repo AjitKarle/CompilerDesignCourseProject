@@ -1,0 +1,175 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Compiler</title>
+    <style>
+        .table {
+            max-width: 80%;
+            padding: 20px;
+            margin: auto;
+            margin-top: 34px;
+            border: 3px solid black;
+        }
+
+        .container h3,
+        h1 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: black">Compiler Design Course Project</h1><br>
+        <div class="text-center">
+            <h3>Simple Compiler of an arbitrary language made in Python</h3>
+        </div>
+        <br>
+        <div style="text-align: center"> 
+            <ul style="list-style-type: none;">
+            <h4>Abilities of the Compiler</h4>
+            <li>Understands variable assignments.</li>
+            <li>Solves simple math calculations with considering operator and paranthese priority.</li>
+            <li>Solves simple IF-ELSE statement</li>
+            <li>Also it is able to solve simpe FOR statement as well!!</li>
+            <li>Distiguishes INT and DOUBLE data types in its calculations.</li>
+            </ul>
+        </div>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr class = "text-center">
+                    <th scope = "col"   style="width:20%">Index</th>
+                    <th scope="col"  style="width:60%">Example</th>
+                    <th scope="col"  style="width:20%">Run</th>
+                </tr>
+            </thead>
+            <tbody class = "text-center">
+                <tr>
+                    <th scope="row">1</th>
+                    <th scope="row"><code>
+                        A = 10<br>
+                        B= 20<br>
+                        C = A+B<br>
+                        OUT C               
+                    </code></th>
+                    <td><button type="button" class="btn btn-success btn-lg">
+                        <li><a href="example1" style="color:aliceblue">RUN</a></li>
+                    </button>
+                </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <th scope="row"><code>
+                A = 35.92<br>
+                B = 10.48<br>
+                C = A+B<br>
+                OUT C
+                    </code></th>
+                    <td><button type="button" class="btn btn-success btn-lg">
+                        <li><a href="example2" style="color:aliceblue">RUN</a></li>
+                    </button></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <th scope="row"><code>
+                        A = 4<br>
+                        B = 20<br>
+                        C = B / A<br>
+                        OUT C
+                    </code></th>
+                    <td><button type="button" class="btn btn-success btn-lg">
+                        <li><a href="example3" style="color:aliceblue">RUN</a></li>
+                    </button></td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <th scope="row"><code>
+                        A = 6.28<br>
+                        B = 92812<br>
+                        C = B / A<br>
+                        OUT C
+                    </code></th>
+                    <td><button type="button" class="btn btn-success btn-lg">
+                        <li><a href="example4" style="color:aliceblue">RUN</a></li>
+                    </button></td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <th scope="row"><code>
+                        A = 6<br>
+                        B = 2<br>
+                        C = A + B<br>
+                        D = B * A * C - 12 + B * C<br>
+                        OUT D
+                        </code>
+                    </th>
+                    <td><button type="button" class="btn btn-success btn-lg">
+                        <li><a href="example5" style="color:aliceblue">RUN</a></li>
+                    </button></td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <th scope="row"><code>
+                        A = 1<br>
+                        B = 2<br>
+                        C = A + B<br>
+                        D = (A + B * B ) * C + B<br>
+                        OUT D
+                        </code>
+                    </th>
+                    <td><button type="button" class="btn btn-success btn-lg">
+                        <li><a href="example6" style="color:aliceblue">RUN</a></li>
+                    </button></td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <th scope="row"><code>
+                        A1 = 1<br>
+                        B1 = 2<br>
+                        A2 = IF A1 <= B1 THEN A1 ELSE B1<br> OUT A2
+                        </code>
+                    </th>
+                    <td><button type="button" class="btn btn-success btn-lg">
+                        <li><a href="example7" style="color:aliceblue">RUN</a></li>
+                    </button></td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <th scope="row"><code>
+                        A = 1<br>
+                        B = 2<br>
+                        C = IF ( A + B * 12 ) <= 3 THEN A ELSE B<br>
+                        OUT C
+                        </code>
+                    </th>
+                    <td><button type="button" class="btn btn-success btn-lg">
+                        <li><a href="example8" style="color:aliceblue">RUN</a></li>
+                    </button></td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <th scope="row"> 
+                        <code>
+                        A = 2<br>
+                        B = 3<br>
+                        LOOP C = C + A + B * 2 TIMES 4<br>
+                        D = C * 4<br>
+                        OUT D
+                        </code>
+                    </th>
+                    <td><button type="button" class="btn btn-success btn-lg">
+                        <li><a href="example9" style="color:aliceblue">RUN</a></li>
+                    </button></td>
+                </tr>
+            </tbody>
+        </table>
+        </body>
+
+</html>
+{% endblock %}
